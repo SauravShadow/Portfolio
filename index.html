@@ -78,9 +78,27 @@
                 <a href="#philosophy" class="nav-link">Philosophy</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
-            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            <a href="#contact" class="btn btn-outline nav-cta">Let's Talk</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <nav class="mobile-nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#philosophy" class="nav-link">Philosophy</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -288,8 +306,7 @@
                         and learning.</p>
                 </div>
 
-                <div class="projects-grid"
-                    style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+                <div class="projects-grid" id="philosophy-grid">
                     <!-- Thought 1 -->
                     <div class="reveal" style="border-left: 3px solid var(--accent-primary); padding-left: 1.5rem;">
                         <h3
