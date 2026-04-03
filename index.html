@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Kumar | Software Engineer</title>
+    <meta name="description" content="Portfolio of Saurav Kumar, Software Engineer specializing in C++ and high-performance backend systems.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cv-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .cv-list li {
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .cv-list li::before {
+            content: '▹';
+            color: var(--accent-primary);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .date {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+        }
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .skill-group h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background element -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Saurav<span>.</span></a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <span class="badge">Software Engineer</span>
+                    <h1 class="hero-title">Building <span class="gradient-text">high-performance</span> backend systems.</h1>
+                    <p class="hero-subtitle">Hello, I'm Saurav Kumar. I specialize in designing and building efficient, reliable, and scalable systems in C++, with deep expertise in multithreading, algorithmic optimization, and system design.</p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="btn btn-primary">View My Experience</a>
+                        <a href="#contact" class="btn btn-text">Contact Me &rarr;</a>
+                    </div>
+                </div>
+                <div class="hero-image reveal-right">
+                    <img src="assets/profile.jpg" alt="Saurav Avatar" class="avatar" style="object-fit: cover; border-radius: 30px; max-height: 500px; width: 100%;">
+                    <div class="glass-card tech-stack">
+                        <span>C++</span> • <span>Python</span> • <span>System Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="projects section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+                    <p class="section-description">A timeline of my systems engineering journey and impactful contributions.</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Experience 1 -->
+                    <article class="project-card reveal">
+                        <div class="project-info">
+                            <h3 class="project-title">Software Engineer</h3>
+                            <span class="date">Oct 2023 – Present | Keysight Technologies, Bangalore</span>
+                            <ul class="cv-list">
+                                <li>Designed and optimized high-performance C++ modules for simulation and large-scale data processing, improving runtime efficiency by 15%.</li>
+                                <li>Refactored legacy systems into modular architectures, vastly improving maintainability.</li>
+                                <li>Developed multi-threaded components to handle concurrent workloads efficiently, maximizing system throughput.</li>
+                                <li>Constructed scalable data ingestion pipelines executing DBMS queries and automations saving 20+ hours monthly.</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">System Design</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Jenkins CI/CD</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Experience 2 -->
+                    <article class="project-card reveal reveal-delay">
+                        <div class="project-info">
+                            <h3 class="project-title">Industry Project Collab</h3>
+                            <span class="date">Jan 2023 – Jun 2023 | IISc & AON, Bangalore</span>
+                            <ul class="cv-list">
+                                <li>Collaborated on a data-driven risk analysis project involving large structured datasets from the insurance domain.</li>
+                                <li>Built specialized Python scripts to robustly clean, validate, and transform massive datasets.</li>
+                                <li>Architected data processing workflows to support comprehensive risk assessment and precise pattern identification.</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Data Processing</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Skills Section -->
+        <section id="education" class="projects section" style="padding-top: 0;">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Education -->
+                    <div class="reveal">
+                        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Academics</h2>
+                        
+                        <article class="project-card" style="margin-bottom: 1.5rem;">
+                            <div class="project-info">
+                                <h3 class="project-title">M.Tech in Structural Engineering</h3>
+                                <span class="date">2021 – 2023 | IISc Bangalore</span>
+                                <p class="project-desc">Indian Institute of Science</p>
+                            </div>
+                        </article>
+                        
+                        <article class="project-card">
+                            <div class="project-info">
+                                <h3 class="project-title">B.Tech in Civil Engineering</h3>
+                                <span class="date">NIT Jamshedpur, India</span>
+                                <p class="project-desc">National Institute of Technology</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="reveal reveal-delay glass-card" style="padding: 2.5rem;">
+                        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Technical <span class="gradient-text">Core</span></h2>
+                        <div class="skills-container">
+                            <div class="skill-group">
+                                <h4>Engineering Languages & Cloud</h4>
+                                <div class="project-tags">
+                                    <span class="tag">C++</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Linux</span>
+                                    <span class="tag">AWS (EC2, S3, RDS)</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>System Design & Architectures</h4>
+                                <div class="project-tags">
+                                    <span class="tag">LLD & HLD</span>
+                                    <span class="tag">Multithreading</span>
+                                    <span class="tag">Microservices</span>
+                                    <span class="tag">Low-latency</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Tools & Devops Operations</h4>
+                                <div class="project-tags">
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">Docker Compose</span>
+                                    <span class="tag">Jenkins CI/CD</span>
+                                    <span class="tag">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-card glass-card reveal">
+                    <h2 class="contact-title">Let's build reliable<br><span class="gradient-text">backend solutions</span>.</h2>
+                    <p class="contact-desc">Currently based in Bangalore, India. I am open to discussing high-performing software engineering opportunities.</p>
+                    <a href="mailto:sauravkr031@gmail.com" class="btn btn-primary btn-lg">sauravkr031@gmail.com</a>
+                    
+                    <div class="social-links">
+                        <a href="tel:+917488864354" class="social-link" style="color: var(--accent-primary);">+91 7488864354</a>
+                        <a href="https://github.com/SauravShadow" target="_blank" class="social-link">Github</a>
+                        <a href="https://linkedin.com/in/saurav-kumar-2032bb213" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://leetcode.com/u/SauravSubaru" target="_blank" class="social-link">LeetCode</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Saurav Kumar. All rights reserved.</p>
+            <p class="footer-note">Designed & Built with ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
