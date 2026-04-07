@@ -468,6 +468,7 @@ h1, h2, h3, h4 {
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition-fast);
+    white-space: nowrap;
 }
 
 .social-link:hover {
@@ -644,10 +645,19 @@ footer {
         justify-content: center;
     }
 
+    .hero-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .tech-stack {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: -30px;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        transform: none;
+        margin-top: 1rem;
+        justify-content: center;
+        animation: none;
     }
 
     .avatar {
@@ -730,6 +740,12 @@ footer {
 
     .contact-card {
         padding: 2.5rem 1.25rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     .blob-1 {
