@@ -1,0 +1,40 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main        # Remote default branch for SauravShadow/Portfolio
+
+jobs:
+  deploy:
+    runs-on: self-hosted      # Runs on YOUR Windows machine via the local runner
+
+    steps:
+      - name: Checkout latest code
+        uses: actions/checkout@v4
+
+      - name: Sync working directory and rebuild container
+        shell: powershell
+        run: |
+          Set-Location C:\Users\HP\Desktop\HostedProjects\PortFolio
+
+          # Pull the latest committed files into the working directory
+          git fetch --all
+          git checkout main
+          git reset --hard origin/main
+
+          # Rebuild the Docker image and restart the container (zero-downtime)
+          docker compose up -d --build portfolio
+
+          # Remove dangling old image layers to save disk space
+          docker image prune -f
+
+      - name: Verify container is running
+        shell: powershell
+        run: |
+          $status = docker inspect --format="{{.State.Status}}" portfolio
+          if ($status -ne "running") {
+            Write-Error "Portfolio container is NOT running. Status: $status"
+            exit 1
+          }
+          Write-Host "Portfolio container is running successfully."

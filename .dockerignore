@@ -1,0 +1,10 @@
+.git
+.DS_Store
+*.ps1
+*.bat
+*.xml
+__pycache__
+*.pyc
+README.md
+start.bat
+register-task.ps1
