@@ -206,11 +206,19 @@
                         <div class="project-info" style="padding: 2rem;">
                             <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Multi-Threading Task Scheduler</h3>
                             <span class="date" style="margin-bottom: 1rem; color: var(--accent-secondary);">C++ Concurrency Project</span>
-                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">A high-performance task scheduling implementation leveraging multithreading in C++ to execute concurrent workloads efficiently.</p>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">A high-performance multithreaded task scheduling engine built in C++, paired with an interactive web dashboard for real-time visualization. The system exposes a configurable thread pool whose size can be adjusted at runtime, accepting concurrent task submissions via a REST API.</p>
+                            <ul style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.8;">
+                                <li>Thread pool with <strong style="color: var(--text-primary);">runtime-configurable concurrency</strong> — resize the pool on the fly without restarting</li>
+                                <li>Tasks streamed live to the browser via <strong style="color: var(--text-primary);">Server-Sent Events (SSE)</strong>, showing per-thread progress in real time</li>
+                                <li>Brute-force password cracking simulation as the workload — each thread independently attempts character combinations against a target</li>
+                                <li>Containerised with Docker and deployed via GitHub Actions self-hosted CI/CD pipeline</li>
+                            </ul>
                             <div class="project-tags" style="margin-bottom: 0;">
                                 <span class="tag">C++</span>
                                 <span class="tag">Multithreading</span>
                                 <span class="tag">Task Scheduling</span>
+                                <span class="tag">SSE</span>
+                                <span class="tag">REST API</span>
                                 <span class="tag">Docker</span>
                                 <span class="tag">GitHub Actions</span>
                             </div>
@@ -264,8 +272,7 @@ graph TD
                                 <span class="tag">C++</span>
                             </div>
                             <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem;">
-                                <a href="https://www.saurav-info.xyz" target="_blank" class="project-link btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Live Site &nearr;</a>
-                                <a href="https://github.com/SauravShadow/Portfolio" target="_blank" class="project-link" style="color: var(--accent-primary); display: flex; align-items: center;">View on GitHub &nearr;</a>
+                                <a href="https://github.com/SauravShadow/Portfolio" target="_blank" class="project-link btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View on GitHub &nearr;</a>
                             </div>
                         </div>
                     </article>
