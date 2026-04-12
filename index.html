@@ -201,17 +201,44 @@
                 </div>
                 
                 <div class="projects-grid" id="extensible-projects-grid">
-                    <!-- Project 1: Task Scheduler -->
+                    <!-- Project 1: C++ Streaming Server -->
                     <article class="project-card reveal glass-card">
+                        <div class="project-info" style="padding: 2rem;">
+                            <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">C++ High-Performance Streaming Server</h3>
+                            <span class="date" style="margin-bottom: 1rem; color: var(--accent-secondary);">Systems &amp; Backend Engineering</span>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">A high-performance media server built in C++ that mimics enterprise-scale streaming logic. It features zero-copy data transfer, adaptive cross-platform support, and native byte-range seeking for seamless video playback.</p>
+                            <ul style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.8;">
+                                <li><strong>Zero-Copy Performance</strong>: Implements Linux <code>sendfile</code> optimization for maximum throughput and minimal CPU overhead.</li>
+                                <li><strong>Smart Content Discovery</strong>: Dynamically scans and serves media libraries with recursive cover art and metadata resolution.</li>
+                                <li><strong>Byte-Range Support</strong>: Enables instant HTTP range-based seeking and scrubbing in any modern browser.</li>
+                                <li><strong>Cross-Platform Engine</strong>: Native Win32 support for local development with POSIX/Docker optimization for production.</li>
+                            </ul>
+                            <div class="project-tags" style="margin-bottom: 0;">
+                                <span class="tag">C++</span>
+                                <span class="tag">Systems Design</span>
+                                <span class="tag">Zero-Copy</span>
+                                <span class="tag">Multithreading</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">CI/CD</span>
+                            </div>
+                            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem;">
+                                <a href="https://github.com/SauravShadow/Streaming-Server-in-Cpp" target="_blank" class="project-link btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project &nearr;</a>
+                                <a href="https://github.com/SauravShadow/Streaming-Server-in-Cpp" target="_blank" class="project-link" style="color: var(--accent-primary); display: flex; align-items: center;">View on GitHub &nearr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Task Scheduler -->
+                    <article class="project-card reveal reveal-delay glass-card">
                         <div class="project-info" style="padding: 2rem;">
                             <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Multi-Threading Task Scheduler</h3>
                             <span class="date" style="margin-bottom: 1rem; color: var(--accent-secondary);">C++ Concurrency Project</span>
-                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">A high-performance multithreaded task scheduling engine built in C++, paired with an interactive web dashboard for real-time visualization. The system exposes a configurable thread pool whose size can be adjusted at runtime, accepting concurrent task submissions via a REST API.</p>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">A high-performance multithreaded task scheduling engine built in C++, paired with an interactive web dashboard for real-time visualization. The system exposes a configurable thread pool whose size can be adjusted at runtime.</p>
                             <ul style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.8;">
-                                <li>Thread pool with <strong style="color: var(--text-primary);">runtime-configurable concurrency</strong> — resize the pool on the fly without restarting</li>
-                                <li>Tasks streamed live to the browser via <strong style="color: var(--text-primary);">Server-Sent Events (SSE)</strong>, showing per-thread progress in real time</li>
-                                <li>Brute-force password cracking simulation as the workload — each thread independently attempts character combinations against a target</li>
-                                <li>Containerised with Docker and deployed via GitHub Actions self-hosted CI/CD pipeline</li>
+                                <li>Thread pool with <strong style="color: var(--text-primary);">runtime-configurable concurrency</strong> — resize the pool on the fly.</li>
+                                <li>Tasks streamed live via <strong style="color: var(--text-primary);">Server-Sent Events (SSE)</strong>, showing per-thread progress.</li>
+                                <li>Brute-force password cracking simulation as the workload.</li>
+                                <li>Containerised with Docker and deployed via GitHub Actions CI/CD.</li>
                             </ul>
                             <div class="project-tags" style="margin-bottom: 0;">
                                 <span class="tag">C++</span>
@@ -220,7 +247,6 @@
                                 <span class="tag">SSE</span>
                                 <span class="tag">REST API</span>
                                 <span class="tag">Docker</span>
-                                <span class="tag">GitHub Actions</span>
                             </div>
                             <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem;">
                                 <a href="https://task.saurav-info.xyz" target="_blank" class="project-link btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Live Dashboard &nearr;</a>
@@ -229,12 +255,12 @@
                         </div>
                     </article>
 
-                    <!-- Project 2: CI/CD Infrastructure -->
+                    <!-- Project 3: CI/CD Infrastructure -->
                     <article class="project-card reveal reveal-delay glass-card">
                         <div class="project-info" style="padding: 2rem;">
                             <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Containerized CI/CD Infrastructure</h3>
                             <span class="date" style="margin-bottom: 1rem; color: var(--accent-secondary);">DevOps &amp; Deployment Engineering</span>
-                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Designed and deployed a full self-hosted production infrastructure for two live projects. Each service runs in an isolated Docker container with automatic zero-downtime redeploys triggered on every Git push via GitHub Actions self-hosted runners, all exposed globally through a Cloudflare Zero-Trust Tunnel.</p>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Designed and deployed a full self-hosted production infrastructure. Each service runs in an isolated Docker container with automatic zero-downtime redeploys via GitHub Actions, exposed globally through a Cloudflare Tunnel.</p>
                             
                             <div class="mermaid" style="margin: 1.5rem 0; padding: 1.5rem; background: rgba(0, 0, 0, 0.2); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 0.85rem;">
 graph TD
@@ -268,8 +294,6 @@ graph TD
                                 <span class="tag">Cloudflare Tunnel</span>
                                 <span class="tag">CI/CD</span>
                                 <span class="tag">Self-hosted Runner</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">C++</span>
                             </div>
                             <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem;">
                                 <a href="https://github.com/SauravShadow/Portfolio" target="_blank" class="project-link btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View on GitHub &nearr;</a>
