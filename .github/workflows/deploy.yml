@@ -13,31 +13,22 @@ jobs:
       - name: Checkout latest code
         uses: actions/checkout@v4
 
-      - name: Sync working directory and rebuild container
-        shell: powershell
+      - name: Update and Deploy Portfolio
         run: |
-          # Add Docker and Git to PATH (runner child process uses system PATH, not user PATH)
-          $env:PATH = "C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;$env:PATH"
-
-          Set-Location C:\Users\HP\Desktop\HostedProjects\PortFolio
-
-          # Pull the latest committed files into the working directory
-          git fetch --all
-          git checkout main
+          cd /home/subaru/projects/Portfolio/Portfolio
+          git fetch origin
           git reset --hard origin/main
-
-          # Rebuild the Docker image and restart the container (zero-downtime)
-          docker compose up -d --build portfolio
-
-          # Remove dangling old image layers to save disk space
-          docker image prune -f
+          sg docker -c "docker build -t portfolio:latest ."
+          sg docker -c "docker stop portfolio || true"
+          sg docker -c "docker rm portfolio || true"
+          sg docker -c "docker run -d --name portfolio -p 8080:8080 portfolio:latest"
+          sg docker -c "docker image prune -a -f --filter 'until=24h'"
 
       - name: Verify container is running
-        shell: powershell
         run: |
-          $status = docker inspect --format="{{.State.Status}}" portfolio
-          if ($status -ne "running") {
-            Write-Error "Portfolio container is NOT running. Status: $status"
+          status=$(docker inspect --format="{{.State.Status}}" portfolio)
+          if [ "$status" != "running" ]; then
+            echo "Portfolio container is NOT running. Status: $status"
             exit 1
-          }
-          Write-Host "Portfolio container is running successfully."
+          fi
+          echo "Portfolio container is running successfully."
